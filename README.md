@@ -22,6 +22,7 @@ I would say the target range is for databases smaller than 200 rows, otherwise a
 ### Example
 
 ```
+let jsonbase = require('jsonbase');
 jsonbase.target('/database');
 jsonbase.create('discords');
 jsonbase.insert('discords',{href: 'discord.com/server/1', text: 'Server 1'});
@@ -31,4 +32,10 @@ jsonbase.update('discords',(row)=>{return row.text.startsWith('Server')},{info: 
 jsonbase.remove('discords',(row)=>{return row.text == 'Server 1'});
 let results = jsonbase.select('discords',(row, i)=>{return i == 1});
 console.log(results);
+```
+
+If you downloaded this package through github use:
+
+```
+let jsonbase = require('./jsonbase/jsonbase.js');
 ```
