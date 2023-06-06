@@ -6,18 +6,18 @@ I would say the target range is for databases smaller than 200 rows, otherwise a
 
 ### Methods
 
-|Method                         |Parameters                   |Function                         |
-|:------------------------------|:---------------------------:|:--------------------------------|
-|.target(directory)             |<STRING>                     |Defines Directory                |
-|.create(table)                 |<STRING>                     |Creates Table                    |
-|.delete(table)                 |<STRING>                     |Deletes Table                    |
-|.backup(table)                 |<STRING>                     |Creates Backup of Table          |
-|.revert(table)                 |<STRING>                     |Overrides Table with Backup      |
-|.insert(table, data)           |<STRING> <OBJECT>            |Inserts Row into Table           |
-|.update(table, matchFn , data) |<STRING> <FUNCTION> <OBJECT> |Updates Row in Table             |
-|.remove(table, matchFn)        |<STRING> <FUNCTION>          |Removes Row from Table           |
-|.select(table, matchFn)        |<STRING> <FUNCTION>          |Selects Rows from Table          |
-|.single(table, matchFn)        |<STRING> <FUNCTION>          |Selects 1 Row from Table (faster)|
+|Method                         |Parameters                |Function                         |
+|:------------------------------|:------------------------:|:--------------------------------|
+|.target(directory)             |STRING>                   |Defines Directory                |
+|.create(table)                 |STRING>                   |Creates Table                    |
+|.delete(table)                 |STRING>                   |Deletes Table                    |
+|.backup(table)                 |STRING>                   |Creates Backup of Table          |
+|.revert(table)                 |STRING>                   |Overrides Table with Backup      |
+|.insert(table, data)           |STRING, OBJECT            |Inserts Row into Table           |
+|.update(table, matchFn , data) |STRING, FUNCTION, OBJECT  |Updates Row in Table             |
+|.remove(table, matchFn)        |STRING, FUNCTION          |Removes Row from Table           |
+|.select(table, matchFn)        |STRING, FUNCTION          |Selects Rows from Table          |
+|.single(table, matchFn)        |STRING, FUNCTION          |Selects 1 Row from Table (faster)|
 
 ### Example
 
