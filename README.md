@@ -6,9 +6,8 @@ I would say the target range is for databases smaller than 200 rows, otherwise a
 
 ### Methods
 
-|Method                         |Parameters                |Return | Function                         |
-|:------------------------------|:---------------------- -:|:-----:|:--------------------------------|
-|.target(directory)             |STRING                    |Promise          |Defines Directory                |
+|Method                         |Parameters                |Return | Function                                  |
+|:------------------------------|:---------------------- -:|:----------------|Defines Directory                |
 |.create(table)                 |STRING                    |Promise          |Creates Table                    |
 |.delete(table)                 |STRING                    |Promise          |Deletes Table                    |
 |.backup(table)                 |STRING                    |Promise          |Creates Backup of Table          |
