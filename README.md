@@ -13,19 +13,45 @@ I would say the target range is for databases smaller than 200 rows, otherwise a
 |.select(STRING, FUNCTION)           |Table Name, Match Function|Promise          |Selectors Rows from Table         |  
 |
 
-### .target()
+### Install
+
+Using NPM: `npm install bryku-jsonbase`
 
 ```
-  // npm install bryku-jsonbase
-  let jsonbase = require('bryku-jsonbase'); // npm install bryku-jsonbase
-  // github 
-  // let jsonbase = require('./bryku-jsonbase'); // github 
-	  jsonbase.select('discords', (row)=>{return row.info == 'Bloop'})
-	  	.then((data)=>{
-	  		console.log('select',data);
-	  	}).catch((err)=>{
-	  		console.log('--- ', err);
-	  	})
+let jsonbase = require('bryku-jsonbase');
+```
+Using Github download:
+
+```
+let jsonbase = require('./jsonbase/index.js');
+```
+
+
+
+### .target(directory_name)  (STRING)
+
+Returns promise for error handling.
+
+```
+let jsonbase = require('bryku-jsonbase');
+    jsonbase.target('/database');
+```
+
+
+
+### .select(table_name) (STRING)
+
+Lets fetch the first 3 rows that match!
+
+```
+let jsonbase = require('bryku-jsonbase');
+    jsonbase.select('discords', (r,i)=>{return i < 3})
+        .then((data)=>{
+            console.log(data);
+         })
+	 .catch((err)=>{
+             console.log('ERROR:', err);
+         })
 ```
 
 |:------------------------------|:---------------------- -:|:----------------|
