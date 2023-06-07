@@ -13,6 +13,20 @@ I would say the target range is for databases smaller than 200 rows, otherwise a
 |.select(STRING, FUNCTION)           |Table Name, Match Function|Promise          |Selectors Rows from Table         |  
 |
 
+### .target()
+
+```
+  // npm install bryku-jsonbase
+  let jsonbase = require('bryku-jsonbase'); // npm install bryku-jsonbase
+  // github 
+  // let jsonbase = require('./bryku-jsonbase'); // github 
+	  jsonbase.select('discords', (row)=>{return row.info == 'Bloop'})
+	  	.then((data)=>{
+	  		console.log('select',data);
+	  	}).catch((err)=>{
+	  		console.log('--- ', err);
+	  	})
+```
 
 |:------------------------------|:---------------------- -:|:----------------|
 |.target(directory)             |Defines Directory                |
