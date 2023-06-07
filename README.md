@@ -6,8 +6,15 @@ I would say the target range is for databases smaller than 200 rows, otherwise a
 
 ### Methods
 
-|Method                         |Parameters                |Return | Function                                  |
-|:------------------------------|:---------------------- -:|:----------------|Defines Directory                |
+|Method                              |Parameters                |Return           |Function                          |
+|:-----------------------------------|:------------------------:|:----------------|:---------------------------------|
+|.target(\<string\>)                 |Directory Name            |Promise          |Defines Directory for .json files |
+|.single(\<string\>, <\funciton\>)   |Table Name, Match Function|Promise          |Selectors Row from Table (fastest)|
+|.select(\<string\>, <\funciton\>)   |Table Name, Match Function|Promise          |Selectors Rows from Table         |  
+
+
+|:------------------------------|:---------------------- -:|:----------------|
+|.target(directory)             |Defines Directory                |
 |.create(table)                 |STRING                    |Promise          |Creates Table                    |
 |.delete(table)                 |STRING                    |Promise          |Deletes Table                    |
 |.backup(table)                 |STRING                    |Promise          |Creates Backup of Table          |
