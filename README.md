@@ -1,6 +1,20 @@
 # Summary  
   
 Jsonbase allows you to interact with **.json** files like a database. This can be a great solution for logs, news, and admin messages. I would say the target range is for databases smaller than 200 rows, otherwise a traditional database is recommended.
+&nbsp;
+
+You can download this package from github or install it through npm.
+
+**Github**
+
+```
+let jsonbase = require('./jsonbase/index.js');
+```
+**NPM** - `npm install bryku-jsonbase`
+
+```
+let jsonbase = require('jsonbase');
+```
   
 ## .target(directory) (STRING)
 
